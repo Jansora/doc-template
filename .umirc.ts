@@ -1,25 +1,26 @@
 import { defineConfig } from 'dumi';
 
-const repo = 'dumi-template';
+const title = 'doc template';
 
 export default defineConfig({
-  title: repo,
+  title: `${title}`,
   favicon:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+    'https://cdn.jansora.com/logo/logo.png',
   logo:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+    'https://cdn.jansora.com/logo/logo.png',
   outputPath: 'docs-dist',
   mode: 'site',
-  hash: true,
+  hash: false,
   // Because of using GitHub Pages
-  base: `/${repo}/`,
-  publicPath: `/${repo}/`,
+  base: `/`,
+  publicPath: `/`,
   navs: [
     null,
     {
       title: 'GitHub',
-      path: 'https://github.com/umijs/dumi-template',
+      path: 'https://github.com/Jansora/doc/tree/main/mybatis',
     },
   ],
+  locales: [['zh-CN', '中文']]
   // more config: https://d.umijs.org/config
 });

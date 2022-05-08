@@ -1,86 +1,60 @@
 // docs/.vuepress/config.ts
 import {defineUserConfig} from 'vuepress'
-import type {MixThemeConfig} from 'vuepress-theme-mix/lib/node'
+import { mixTheme } from 'vuepress-theme-mix'
 
-export default defineUserConfig<MixThemeConfig>({
+
+export default defineUserConfig({
   lang: 'zh-CN',
   title: 'Doc Demo',
-  description: 'Products maintained by Doc Demo',
-  // Theme Config
-  theme: 'vuepress-theme-mix',
-  plugins: [
-    [
-      "vuepress-plugin-chart",
-    ],
-    [
-      "@renovamen/vuepress-plugin-mermaid",
-    ],
-    [
-      "@renovamen/vuepress-plugin-katex",
-    ]
+  description: 'Doc Demo',
+  head: [
+    ['link', { rel: 'shortcut icon', type: "image/x-icon", href: `https://cdn.jansora.com/img/linux-shell.png` }]
   ],
-  themeConfig: {
-    // logo: '/images/logo.png',
-    title: 'Doc Demo',
-
+  // Theme Config
+  theme: mixTheme({
     themePlugins: {
-      // shiki: false,
-      git: true,
-
+      git: true
     },
+    // logo: '/images/logo.png',
+    title: '程序人生',
+
+
+
     navbar: [
       // {
-      //   text: 'Offer',
-      //   children: [
-      //     '/offer/product/README.md',
-      //     '/offer/logic/README.md',
-      //     '/offer/client/README.md',
-      //     // {
-      //     //   text: '更新日志',
-      //     //   link: 'https://github.com/gavinliu6/vuepress-theme-mix/blob/main/CHANGELOG.md',
-      //     // },
-      //   ],
+      //   text: 'MySQL',
+      //   link: "/mysql/basic/explain.md",
       // },
       // {
-      //   text: 'Internationalization',
-      //   link: "/i18n/logic/内容国际化.md",
-      //   // children: [
-      //   //   '/offer/i18n/logic/README.md',
-      //   //   // {
-      //   //   //   text: '更新日志',
-      //   //   //   link: 'https://github.com/gavinliu6/vuepress-theme-mix/blob/main/CHANGELOG.md',
-      //   //   // },
-      //   // ],
+      //   text: '计算机算法',
+      //   link: "/algorithms/data-structure/linked-list.md",
       // },
     ],
 
     sidebar: {
-      // '/offer/product/': [
+      // '/mysql/basic': [
       //   {
-      //     // type: 'link-group', text: '产品文档', link: 'README.html',
-      //     type: 'group', text: '产品文档', link: 'README.html', children: [] },
-      // ],
-      // '/offer/logic/': [
-      //   // { type: 'group', text: '逻辑文档', link: 'README.md', children: [], },
-      //   { type: 'group', text: '电信版本', link: '电信版本.md', children: ['/offer/logic/创建OFFER版本.md', '/offer/logic/拷贝OFFER版本.md'],},
-      //   {
-      //     type: 'group', text: '基础组件', link: '', children: [
-      //         '/offer/logic/base/媒体.md', '/offer/logic/base/标签.md'
-      //     ],
+      //     type: 'group', text: '基础概念', link: '', children: ['/mysql/basic/explain.md']
       //   },
-      //   { type: 'group', text: 'FAQ', link: '', children: ['/offer/logic/faq/电信和电商区别.md','/offer/logic/faq/OFFER的核心逻辑.md','/offer/logic/faq/OFFER功能与表关联关系.md'],},
       // ],
-      // '/i18n/logic/': [
+      // '/algorithms/data-structure': [
       //   {
-      //     type: 'group', text: '逻辑文档', link: '',
-      //     children: [
-      //       '/i18n/logic/内容国际化.md'
-      //     ],
+      //     type: 'group', text: '数据结构', link: '', children: ['/algorithms/data-structure/linked-list.md', '/algorithms/data-structure/array.md']
       //   },
       // ],
     },
 
-
-  },
+  }),
+  plugins: [
+    {
+      name: "vuepress-plugin-chart",
+    },
+    {
+      name: "@renovamen/vuepress-plugin-mermaid",
+    },
+    {
+      name: "@renovamen/vuepress-plugin-katex",
+    },
+  ],
 
 })

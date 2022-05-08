@@ -1,14 +1,14 @@
 {
-  "name": "cee-offer-doc",
+  "name": "doc-template",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Jansora/cee-offer-doc.git",
+  "repository": "https://github.com/Jansora/doc-template.git",
   "author": "Jansora <zhangyue1936@gmail.com>",
   "license": "MIT",
   "private": true,
   "devDependencies": {
     "vuepress": "^2.0.0-beta.38",
-    "vuepress-theme-mix": "^1.3.1"
+    "vuepress-theme-mix": "^1.3.2"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

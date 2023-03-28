@@ -1,3 +1,33 @@
+
+function basic() {
+    return [
+        {
+            text: '基础知识', collapsed: false, items: [
+                { text: '基础知识', link: '/basic' },
+            ]
+        }
+    ]
+}
+
+function query() {
+    return [
+        {
+            text: '查询', collapsed: false, items: [
+                { text: '查询', link: '/query/' },
+            ]
+        }
+    ]
+}
+function devops() {
+    return [
+        {
+            text: '运维', collapsed: false, items: [
+                { text: '运维', link: '/devops' },
+            ]
+        }
+    ]
+}
+
 export default {
     title: 'Doc Template',
     titleTemplate: 'Jansora\'s knowledge base',
@@ -7,32 +37,21 @@ export default {
     lastUpdated: true,
     themeConfig: {
         nav: [
-            { text: 'Guide', link: '/guide' },
-            {
-                text: 'Dropdown Menu',
-                items: [
-                    { text: 'Item A', link: '/item-1' },
-                    { text: 'Item B', link: '/item-2' },
-                    { text: 'Item C', link: '/item-3' }
-                ]
-            }
+            { text: '基础', link: '/basic' },
+            { text: '查询', link: '/query' },
+            { text: '运维', link: '/devops' },
         ],
-        sidebar: [
-            {
-                text: 'Guide',
-                items: [
-                    { text: 'Introduction', link: '/introduction' },
-                    { text: 'Getting Started', link: '/getting-started' },
-
-                ]
-            }
-        ],
+        sidebar: {
+            '/basic/': basic(),
+            '/query/': query(),
+            '/devops/': devops(),
+        },
         editLink: {
-            pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+            pattern: 'https://github.com/Jansora/doc-template/edit/main/docs/:path',
             text: 'Edit this page on GitHub'
         },
         footer: {
-            message: 'Jansora Knowledge base',
+            message: "知识专栏 @ Jansora",
             copyright: 'Copyright © 2019-present Jansora'
         }
     }

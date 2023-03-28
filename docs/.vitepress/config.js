@@ -2,7 +2,7 @@ export default {
     title: 'Doc Template',
     titleTemplate: 'Jansora\'s knowledge base',
     description: 'Just playing around.',
-    cleanUrls: true,
+    cleanUrls: false,
     lang: 'zh-CN',
     lastUpdated: true,
     themeConfig: {

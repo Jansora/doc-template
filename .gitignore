@@ -14,3 +14,4 @@ dist
 .idea
 
 yarn.lock
+.vitepress/cache

@@ -1,4 +1,4 @@
-```
+
 ---
 layout: home
 
@@ -38,4 +38,3 @@ features:
     details: Fast initial load with static HTML, fast post-load navigation with client-side routing.
 ---
 
-```

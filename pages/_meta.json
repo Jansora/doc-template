@@ -1,10 +1,10 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
+  "index": {
+    "type": "page",
+    "title": "Jansora's Document",
+    "display": "hidden",
+    "theme": {
+    }
   },
   "contact": {
     "title": "Contact ↗",

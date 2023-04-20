@@ -72,12 +72,32 @@
     max-width: 30ch;
 }
 
+@keyframes hue {
+
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(-360deg);
+    }
+
+}
+
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    padding: 4rem 0;
+    /*position: relative;*/
+    /*padding: 4rem 0;*/
+    font-family: var(--font-mono);
+    color: rgb(243, 86, 38);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(92deg, rgb(243, 86, 138) 0%, rgb(254, 171, 58) 100%);
+    font-size: 25px;
+    /*display: block;*/
+    animation: 5s linear 0s infinite normal none running hue;
+    margin: 0px 0px 20px;
 }
 
 .center::before {
